@@ -1,8 +1,9 @@
+CC=g++
 CFLAGS=-w
 
 all: chat
 	bin
-	g++ $(CFLAGS) build/server.o -o bin/server
+	$(CC) $(CFLAGS) build/server.o -o bin/server
 	g++ $(CFLAGS) build/client.o -o bin/client
 
 chat: server.o client.o
